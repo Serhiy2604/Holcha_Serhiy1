@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galaxy AI - Додатково</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header>
+    <h1 class="title">Galaxy AI — Розширено</h1>
+    <button id="themeToggle" aria-label="Змінити тему">🌓</button>
+    <nav>
+        <a href="Serhiy.html">Головна</a> | 
+        <a href="MaIn.html">Додаткова сторінка</a>
+    </nav>
+
+  </header>
+
+  <div id="starfield"></div>
+
+  <div id="planet3d"></div>
+
+  <section class="slider-container" aria-label="Слайдер з інформацією">
+    <div class="slider">
+      <div class="slide active" role="tabpanel" aria-hidden="false">
+        <h3>Інтерактивність</h3>
+        <p>Взаємодійте з AI в реальному часі.</p>
+      </div>
+      <div class="slide" role="tabpanel" aria-hidden="true">
+        <h3>Інтерактивні можливості</h3>
+        <p>Відкрийте для себе нові способи взаємодії з AI.</p>
+      </div>
+      <div class="slide" role="tabpanel" aria-hidden="true">
+        <h3>GSAP Анімації</h3>
+        <p>Плавні переходи та появи елементів.</p>
+      </div>
+      <div class="slide" role="tabpanel" aria-hidden="true">
+        <h3>Адаптивність</h3>
+        <p>Працює однаково класно на будь-яких пристроях.</p>
+      </div>
+    </div>
+
+    <div class="slider-controls" role="group" aria-label="Управління слайдером">
+      <button id="prevBtn" aria-label="Попередній слайд">←</button>
+      <button id="nextBtn" aria-label="Наступний слайд">→</button>
+    </div>
+  </section>
+
+  <section class="chatbot-section" aria-label="Чат-бот">
+    <div id="chatbot">
+      <pre id="chatOutput" aria-live="polite"></pre>
+      <input id="chatInput" aria-label="Введіть повідомлення" placeholder="Напишіть щось..." />
+      <button id="sendBtn" aria-label="Надіслати повідомлення">Відправити</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>Дякуємо, що обираєте Galaxy AI!</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="Main.js"></script>
+</body>
+</html>

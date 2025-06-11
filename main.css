@@ -1,0 +1,250 @@
+/* Базові стилі */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0d1117;
+  color: #00ffea;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light-theme {
+  background-color: #f5f5f5;
+  color: #011627;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00ffea;
+  transition: color 0.3s ease;
+}
+
+body.light-theme #themeToggle {
+  color: #011627;
+}
+
+/* Зоряне небо (фон) */
+#starfield {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: black;
+  z-index: -1;
+}
+
+/* Інтро блок */
+.intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Планета 3D */
+#planet3d {
+  width: 250px;
+  height: 250px;
+  margin: 2rem auto 4rem auto;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #00ffeaaa;
+  cursor: grab;
+  user-select: none;
+  background: transparent;
+}
+
+/* Особливості */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.feature {
+  background: rgba(0, 255, 234, 0.1);
+  border: 1px solid #00ffea;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.feature:hover,
+.feature:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffea;
+  background: rgba(0, 255, 234, 0.2);
+}
+
+/* Слайдер */
+.slider-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  height: 180px;
+}
+
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: 1rem;
+  border: 1px solid #00ffea;
+  border-radius: 12px;
+  background: rgba(0, 255, 234, 0.1);
+  color: #00ffea;
+  font-size: 1.1rem;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
+}
+
+.slider-controls {
+  margin-top: 1rem;
+}
+
+.slider-controls button {
+  background: none;
+  border: 1px solid #00ffea;
+  border-radius: 6px;
+  color: #00ffea;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background-color: #00ffea;
+  color: #010a13;
+}
+
+/* Чат-бот */
+.chatbot-section {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#chatbot {
+  border: 1px solid #00ffea;
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(0, 255, 234, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  max-width: 100%;
+}
+
+#chatOutput {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: left;
+  color: #00ffea;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+#chatInput {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #00ffea;
+  background: #0d1117;
+  color: #00ffea;
+  font-size: 1rem;
+}
+
+body.light-theme #chatInput {
+  background: #f5f5f5;
+  border-color: #011627;
+  color: #011627;
+}
+
+#sendBtn {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #00ffea;
+  color: #010a13;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#sendBtn:hover {
+  background-color: #00c8b3;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  color: #00ffea99;
+  user-select: none;
+}
+
+body.light-theme footer {
+  color: #01162799;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #planet3d {
+    width: 180px;
+    height: 180px;
+  }
+
+  .slider-container {
+    max-width: 90vw;
+  }
+}
